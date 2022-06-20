@@ -7,3 +7,9 @@
  (libraries webmachine async core cohttp-async)
  (modules hello_async)
  (names hello_async))
+
+(executables
+ (libraries webmachine lwt cohttp-lwt-unix yojson camlimages.jpeg)
+ (modules alpaca_lwt)
+ (names alpaca_lwt))
+
