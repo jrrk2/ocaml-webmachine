@@ -1,33 +1,4 @@
-(** An example CRUD API for id-based operations on JSON objects. The objects are
-    stored in-memory and therefore will not persist across runs of the database.
-    The application does not perform any JSON validation at this time.
-
-    Build by running `dune`:
-
-      [dune build examples/crud_lwt.exe]
-
-    Run using the following command, which will display the path that each
-    request takes through the decision diagram:
-
-      [DEBUG_PATH= ./crud_lwt.exe]
-
-    Here are some sample CURL commands to test on a running server:
-
-      - Get a complete list of items:
-        [curl -i -w "\n" -X GET http://localhost:8080/items]
-
-      - Get the item with id 1:
-        [curl -i -w "\n" -X GET http://localhost:8080/item/1]
-
-      - Create a new item:
-        [curl -i -w "\n" -X POST -d '{"name":"new item"}' http://localhost:8080/items]
-
-      - Modify the item with id 1:
-        [curl -i -w "\n" -X PUT -H 'Content-Type: application/json'\
-          -d '{"name":"modified item"}' http://localhost:8080/item/1]
-
-      - Delete the item with id 1:
-        [curl -i -w "\n" -X DELETE http://localhost:8080/item/1] *)
+(** An example ASCOM alpaca API, somewhat as described in https://www.ascom-standards.org/Documentation/Index.htm#dev *)
 
 open Cohttp_lwt_unix
 open Lwt.Infix
